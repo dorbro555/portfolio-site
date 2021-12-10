@@ -87,14 +87,14 @@ const projects = [
                 <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
                 <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={project.photoLink} alt="blog">
                 <div class="p-6">
-                    <h2 class="tracking-widest title-font font-medium text-gray-500 mb-1">
+                    <h2 class="tracking-widest title-font font-medium text-base-content mb-1">
                         {project.madeWith.join(', ')}
                     </h2>
                     <h1 class="title-font text-lg font-medium text-white mb-3">{project.title}</h1>
                     <p class="leading-relaxed mb-3">{project.description}</p>
                     <div class="flex items-center flex-wrap ">
                     <a href={project.sourceLink}>
-                    <span class="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800 h-10 w-10">
+                    <span class="text-base-content mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800 h-10 w-10">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>GitHub</title>
                         <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
@@ -106,7 +106,7 @@ const projects = [
                     </span>
                     </a>
                     <a href={project.siteLink}>
-                        <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                        <span class="text-base-content inline-flex items-center leading-none text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
