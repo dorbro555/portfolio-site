@@ -1,93 +1,123 @@
+---
+const projects = [
+  {
+    "title" : "Blossom+",
+    "photoLink" : Astro.resolve("../../public/assets/BlossomOG.png"),
+    "webpLink" : "/img/BlossomOG.webp",
+    "photoDimension" : "is-2by1",
+    "photoStructure" : "12 2by1 /img/sfv_candles_home.png,6 2by1 /img/sfv_candles_shop.png 6 2by1 /img/sfv_candles_cart.png",
+    "description" : "Blossom+ is a tool that manages the daisyUI plugin for tailwindcss. As of now, it supports installing the plugin, and setting up the structures for custom theming.",
+    "madeWith" : ["Node.js", "Npm", "Astro"],
+    "siteLink" : "https://blossomplus.netlify.app/",
+    "sourceLink" : "https://github.com/BleedingEffigy/blossom-plus"
+  },
+  { 
+    "title" : "SFV Candle Shop",
+    "photoLink" : "https://rosamint.org/images/CandleShop.png",
+    "webpLink" : "https://rosamint.org/images/CandleShop.webp",
+    "photoDimension" : "is-2by1",
+    "photoStructure" : "12 2by1 /img/sfv_candles_home.png,6 2by1 /img/sfv_candles_shop.png 6 2by1 /img/sfv_candles_cart.png",
+    "description" : "a static ecommerce site for my mom to sell candles but she is not yet ready, so for that reason a payment system is left to be setup.",
+    "madeWith" : ["Gatsby", "Redux"],
+    "siteLink" : "https://sfv-candles.netlify.app/",
+    "sourceLink" : "https://github.com/BleedingEffigy/sfv_candle_shop"
+  },
+  {
+    "title": "¡Aguas! Crypto",
+    "photoLink" : "https://rosamint.org/images/Aguas_Crypto_Homepage.png",
+    "webpLink" : "https://rosamint.org/images/Aguas_Crypto_Homepage.webp",
+    "photoDimension" : "is-2by1",
+    "description" : "a webapp that compiles crypto market data into a form that is more easily digestible to me. It pulls data from express-backend, and collates and presents it through a react-made interface",
+    "madeWith" : ["React", "Redis", "Express.js"],
+    "siteLink" : "https://www.rosamint.org/trade/",
+    "sourceLink" : "https://glitch.com/edit/#!/us-deaths-overview"
+  },
+  {
+    "title" : "US Deaths Project",
+    "photoLink" : "https://rosamint.org/images/USDeathsAPI.png",
+    "webpLink" : "https://rosamint.org/images/USDeathsApi.webp",
+    "photoDimension" : "is-2by1",
+    "description" : "An addition to the adopt-an-api movement, which means developing an api for some flat dataset(think .xls or .cvs), to encourage innovation through consumption of open data. The api is built on express and sqlite. ",
+    "madeWith" : ["React", "Sqlite"],
+    "sourceLink" : "https://github.com/BleedingEffigy/US-Deaths-API",
+    "siteLink" : "https://gentle-inlet-76524.herokuapp.com/"
+  },
+  {
+    "title" : "Navy DEP Blog",
+    "photoLink" : "https://rosamint.org/images/Navy_DEP_Blog_screengrab.png",
+    "webpLink" : "https://rosamint.org/images/Navy_DEP_Blog_screengrab.webp",
+    "photoDimension" : "is-3by2",
+    "description" : "A blog made with django for me to document my thoughts at a time when I thought I was going to be joining the navy.",
+    "madeWith" : ["Django", "Postgresql"],
+    "sourceLink" : "https://github.com/BleedingEffigy/navy-blog",
+    "siteLink" : "https://www.rosamint.org/navyblog/"
+  },
+  {
+    "title" : "Puppy Shop",
+    "photoLink" : "https://rosamint.org/images/SFV-chow-chow-Landing.png",
+    "webpLink" : "https://rosamint.org/images/SFV-chow-chow-Landing.webp",
+    "photoDimension" : "is-2by1",
+    "description" : "This is a react site for my mom to display and sell the numerous litter of puppies she's had",
+    "madeWith" : ["React", "Express"],
+    "sourceLink" : "https://glitch.com/edit/#!/chow-chow-shop",
+    "siteLink" : "https://chow-chow-shop.glitch.me/"
+  },
+  {
+    "title" : "Ether Gift Card",
+    "photoLink" : "https://rosamint.org/images/Ether-Card-Cover.png",
+    "webpLink" : "https://rosamint.org/images/Ether-Card-Cover.webp",
+    "photoDimension" : "is-2by1",
+    "description": "A single page gift card UI to a evm smart contract that held money. If you give it the right answers, it will send the money to an ethereum address I had setup for my mom.",
+    "madeWith" : ["React", "Truffle.js", "Ethereum"],
+    "sourceLink" : "https://glitch.com/edit/#!/ether-gift-card",
+    "siteLink" : "https://ether-gift-card.glitch.me",
+    "smartContract" : "https://github.com/BleedingEffigy/truffle-gift/blob/master/contracts/EtherGift.sol"
+  }
+  
+]
+
+---
+
 <section class="text-gray-400 bg-gray-900 body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap -m-4">
-      <div class="p-4 md:w-1/3">
-        <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
-          <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/720x400" alt="blog">
-          <div class="p-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">CATEGORY</h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">The Catalyzer</h1>
-            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-            <div class="flex items-center flex-wrap ">
-              <a class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"></path>
-                  <path d="M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-              <span class="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>1.2K
-              </span>
-              <span class="text-gray-500 inline-flex items-center leading-none text-sm">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>6
-              </span>
+    { projects.map( project => (
+            <div class="p-4 md:w-1/3">
+                <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={project.photoLink} alt="blog">
+                <div class="p-6">
+                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
+                        {project.madeWith.map( word => word + ', ')}
+                    </h2>
+                    <h1 class="title-font text-lg font-medium text-white mb-3">{project.title}</h1>
+                    <p class="leading-relaxed mb-3">{project.description}</p>
+                    <div class="flex items-center flex-wrap ">
+                    <a href={project.sourceLink}>
+                    <span class="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800 h-10 w-10">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>GitHub</title>
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+                         0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 
+                         1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93
+                          0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 
+                          .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 
+                          1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </span>
+                    </a>
+                    <a href={project.siteLink}>
+                        <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </span>
+                    </a>
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
-          <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/721x401" alt="blog">
-          <div class="p-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">CATEGORY</h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">The 400 Blows</h1>
-            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-            <div class="flex items-center flex-wrap">
-              <a class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"></path>
-                  <path d="M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-              <span class="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>1.2K
-              </span>
-              <span class="text-gray-500 inline-flex items-center leading-none text-sm">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>6
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
-          <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/722x402" alt="blog">
-          <div class="p-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">CATEGORY</h2>
-            <h1 class="title-font text-lg font-medium text-white mb-3">Shooting Stars</h1>
-            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-            <div class="flex items-center flex-wrap ">
-              <a class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"></path>
-                  <path d="M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-              <span class="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>1.2K
-              </span>
-              <span class="text-gray-500 inline-flex items-center leading-none text-sm">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>6
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+        )
+    )
+    }
     </div>
   </div>
 </section>
