@@ -7,12 +7,12 @@ export default function FilteredProjects({ projects}){
     return(
         <>
         <div class="btn-group mx-auto">
-            <button className={`btn${activeTag == 'none' ? ' btn-active':''}`}
+            <button className={`my-2 btn${activeTag == 'none' ? ' btn-active':''} text-neutral-content`}
                     onClick={() => setActiveTag('none')}>
                 All
             </button>
             {allTags.map((tag, idx) => (
-                <button className={`btn${tag == activeTag ? ' btn-active':''}`}
+                <button className={`my-2 btn${tag == activeTag ? ' btn-active':''} text-neutral-content`}
                         onClick={() => setActiveTag(tag)}
                         key={idx}
                 >
