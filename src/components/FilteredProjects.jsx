@@ -3,18 +3,20 @@ import { useState } from 'react'
 export default function FilteredProjects({ projects}){
     const [activeTag, setActiveTag] = useState('none')
     const allTags = [...new Set([].concat(...projects.map(project => project.madeWith)))]
-    console.log(allTags)
     return(
         <>
-        <div class="btn-group mx-auto">
-            <button className={`my-2 btn${activeTag == 'none' ? ' btn-active':''} text-neutral-content`}
-                    onClick={() => setActiveTag('none')}>
+        <div className="btn-group mx-auto">
+            {/* TODO: tailwind breaks if I add a placeholder in the template literal. figure out why  */}
+            <button className={`my-2 btn text-neutral-content`}
+                    onClick={() => setActiveTag('none')}
+                    key='tag none'
+            >
                 All
             </button>
             {allTags.map((tag, idx) => (
                 <button className={`my-2 btn${tag == activeTag ? ' btn-active':''} text-neutral-content`}
                         onClick={() => setActiveTag(tag)}
-                        key={idx}
+                        key={'tag ' + idx}
                 >
                             {tag}
                 </button> 
