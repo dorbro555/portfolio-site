@@ -56,7 +56,7 @@ export default function FilteredProjects({ projects}){
                             </a>
                         </div>
                     </div>
-                    <span className='mx-2'>
+                    <span className='mx-2 text-neutral-content'>
                         {project.date}
                     </span>
                 </div>
