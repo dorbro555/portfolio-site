@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar.astro'
 import Skills from '../components/Skills.astro';
 import Projects from '../components/Projects.astro';
 import About from '../components/About.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
 // You can import components from any supported Framework here!
 
 
@@ -17,35 +18,22 @@ let title = 'My Astro Site';
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<html lang="en" data-theme="darkforest">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>{title}</title>
 
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
-    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<BaseLayout title={title}>
+    <header>
+        <NavBar />
+        <Hero />
+    </header>
+    <Projects />
+    <About />
+    <!--
+        - You can also use imported framework components directly in your markup!
+        -
+        - Note: by default, these components are NOT interactive on the client.
+        - The `:visible` directive tells Astro to make it interactive.
+        -
+        - See https://docs.astro.build/core-concepts/component-hydration/ 
+        -->
 
-</head>
-<body>
-    <main>
-        <header>
-            <NavBar />
-            <Hero />
-        </header>
-        <Projects />
-        <About />
-        <!--
-           - You can also use imported framework components directly in your markup!
-           -
-           - Note: by default, these components are NOT interactive on the client.
-           - The `:visible` directive tells Astro to make it interactive.
-           -
-           - See https://docs.astro.build/core-concepts/component-hydration/ 
-           -->
+</BaseLayout>
 
-    </main>
-</body>
-</html>
