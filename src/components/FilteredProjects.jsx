@@ -1,10 +1,28 @@
 import { useState } from 'react'
 
-export default FilteredProjects = ({ projects }) => {
-
+export default function FilteredProjects({ projects}){
+    const [activeTag, setActiveTag] = useState('none')
+    const allTags = [...new Set([].concat(...projects.map(project => project.madeWith)))]
+    console.log(allTags)
     return(
         <>
-            { projects.map( (project, idx) => (
+        <div class="btn-group mx-auto">
+            <button className={`btn${activeTag == 'none' ? ' btn-active':''}`}
+                    onClick={() => setActiveTag('none')}>
+                All
+            </button>
+            {allTags.map((tag, idx) => (
+                <button className={`btn${tag == activeTag ? ' btn-active':''}`}
+                        onClick={() => setActiveTag(tag)}
+                        key={idx}
+                >
+                            {tag}
+                </button> 
+            ))}
+
+        </div> 
+        <div className='flex flex-row flex-wrap'>
+            { projects.filter( project => activeTag == 'none' ? true : project.madeWith.includes(activeTag)).map( (project, idx) => (
             <div className="p-4 md:w-1/3" key={idx}>
                 <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.photoLink} alt="blog"></img>
@@ -41,6 +59,7 @@ export default FilteredProjects = ({ projects }) => {
         )
     )
     }
+        </div>
         </>
     )
 }
