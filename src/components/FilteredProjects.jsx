@@ -7,14 +7,14 @@ export default function FilteredProjects({ projects}){
         <>
         <div className="btn-group mx-auto">
             {/* TODO: tailwind breaks if I add a placeholder in the template literal. figure out why  */}
-            <button className={`my-2 btn text-neutral-content`}
+            <button className={`my-2 btn btn-outline text-neutral-content`}
                     onClick={() => setActiveTag('none')}
                     key='tag none'
             >
                 All
             </button>
             {allTags.map((tag, idx) => (
-                <button className={`my-2 btn${tag == activeTag ? ' btn-active':''} text-neutral-content`}
+                <button className={`my-2 btn btn-outline${tag == activeTag ? ' btn-active':''} text-neutral-content`}
                         onClick={() => setActiveTag(tag)}
                         key={'tag ' + idx}
                 >
@@ -26,7 +26,7 @@ export default function FilteredProjects({ projects}){
         <div className='flex flex-row flex-wrap'>
             { projects.filter( project => activeTag == 'none' ? true : project.madeWith.includes(activeTag)).map( (project, idx) => (
             <div className="p-4 md:w-1/3" key={idx}>
-                <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden pb-5">
+                <div className="h-full bg-base-200 rounded-lg overflow-hidden pb-5">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.photoLink} alt="blog"></img>
                     <div className="px-4 pt-4">
                         <h2 className="tracking-widest title-font font-medium text-base-content mb-1">
