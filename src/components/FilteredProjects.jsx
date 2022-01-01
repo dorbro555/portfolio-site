@@ -7,14 +7,14 @@ export default function FilteredProjects({ projects}){
         <>
         <div className="btn-group mx-auto">
             {/* TODO: tailwind breaks if I add a placeholder in the template literal. figure out why  */}
-            <button className={`my-2 btn btn-outline text-neutral-content`}
+            <button className={`my-2 btn btn-outline text-base-content`}
                     onClick={() => setActiveTag('none')}
                     key='tag none'
             >
                 All
             </button>
             {allTags.map((tag, idx) => (
-                <button className={`my-2 btn btn-outline${tag == activeTag ? ' btn-active':''} text-neutral-content`}
+                <button className={`my-2 btn btn-outline${tag == activeTag ? ' btn-active':''} text-base-content`}
                         onClick={() => setActiveTag(tag)}
                         key={'tag ' + idx}
                 >
