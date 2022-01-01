@@ -1,7 +1,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx,astro}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'merriweather': ['Merriweather', 'serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+        'andika': ['Andika', 'sans-serif']
+      }
+    },
   },
   plugins: [
     require('daisyui'),
