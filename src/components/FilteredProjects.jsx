@@ -7,14 +7,14 @@ export default function FilteredProjects({ projects}){
         <>
         <div className="btn-group mx-auto">
             {/* TODO: tailwind breaks if I add a placeholder in the template literal. figure out why  */}
-            <button className={`my-2 btn btn-outline text-base-content`}
+            <button className={`my-2 btn btn-outline text-base-content font-poppins`}
                     onClick={() => setActiveTag('none')}
                     key='tag none'
             >
                 All
             </button>
             {allTags.map((tag, idx) => (
-                <button className={`my-2 btn btn-outline${tag == activeTag ? ' btn-active':''} text-base-content`}
+                <button className={`my-2 btn btn-outline${tag == activeTag ? ' btn-active':''} text-base-content font-poppins`}
                         onClick={() => setActiveTag(tag)}
                         key={'tag ' + idx}
                 >
@@ -26,14 +26,14 @@ export default function FilteredProjects({ projects}){
         <div className='flex flex-row flex-wrap'>
             { projects.filter( project => activeTag == 'none' ? true : project.madeWith.includes(activeTag)).map( (project, idx) => (
             <div className="p-4 md:w-1/3" key={idx}>
-                <div className="h-full bg-base-200 rounded-lg overflow-hidden pb-5">
-                <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.photoLink} alt="blog"></img>
-                    <div className="px-4 pt-4">
-                        <h2 className="tracking-widest title-font font-medium text-base-content mb-1">
+                <div className="h-full bg-base-200 rounded-lg overflow-hidden pb-5 border-2 border-base-200 hover:border-base-content">
+                    <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.photoLink} alt="blog"></img>
+                    <div className="px-5 pt-4">
+                        <h2 className="tracking-widest title-font font-poppins text-base-content mb-1 opacity-60">
                             {project.madeWith.join(', ')}
                         </h2>
-                        <h1 className="title-font text-lg font-medium text-base-content mb-3">{project.title}</h1>
-                        <p className="leading-relaxed mb-3">{project.description}</p>
+                        <h1 className="title-font text-xl tracking-tight font-medium font-poppins text-base-content mb-3 opacity-90">{project.title}</h1>
+                        <p className="leading-relaxed mb-3 font-merriweather opacity-90">{project.description}</p>
                         <div className="flex items-center flex-wrap ">
                             <a href={project.sourceLink}>
                                 <span className="fill-base-content mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800 h-10 w-10">
@@ -56,7 +56,7 @@ export default function FilteredProjects({ projects}){
                             </a>
                         </div>
                     </div>
-                    <span className='mx-2 text-neutral-content'>
+                    <span className='mx-2 text-neutral-content opacity-50 lowercase'>
                         {project.date}
                     </span>
                 </div>
