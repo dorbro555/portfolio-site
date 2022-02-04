@@ -82,17 +82,6 @@
       "siteLink" : "https://gentle-inlet-76524.herokuapp.com/"
     },
     {
-      "title" : "Navy DEP Blog",
-      "date": "NOV-DEC 2019",
-      "photoLink" : "https://rosamint.org/images/Navy_DEP_Blog_screengrab.png",
-      "webpLink" : "https://rosamint.org/images/Navy_DEP_Blog_screengrab.webp",
-      "photoDimension" : "is-3by2",
-      "description" : "A blog made with django for me to document my thoughts at a time when I thought I was going to be joining the navy.",
-      "madeWith" : ["Django", "Postgresql"],
-      "sourceLink" : "https://github.com/BleedingEffigy/navy-blog",
-      "siteLink" : "https://www.rosamint.org/navyblog/"
-    },
-    {
       "title" : "Puppy Shop",
       "date": "JUN 2019",
       "photoLink" : "https://rosamint.org/images/SFV-chow-chow-Landing.png",
