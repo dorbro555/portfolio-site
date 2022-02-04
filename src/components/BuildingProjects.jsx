@@ -18,7 +18,7 @@ export default function FilteredProjects({ projects}){
                                 src={project.photoLink} alt="blog"></img>
                         </div>
                         <div className="relative -mt-4 px-6">
-                            <div className="px-5 py-4 bg-base-200 rounded-xl shadow-xl shadow-base-300/60 transition">
+                            <div className="px-5 py-4 bg-base-200 rounded-xl shadow-xl shadow-base-300/60 transition border-2 border-base-200 hover:border-primary">
                                 <h2 className="tracking-widest title-font font-poppins text-base-content mb-1 opacity-60">
                                     {project.madeWith.join(', ')}
                                 </h2>
