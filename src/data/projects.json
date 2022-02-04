@@ -1,39 +1,39 @@
 [
     {
-        "title" : "BestBetsAlgo",
+        "title" : "EphemeralDAO",
         "date": "JAN 2021",
-        "photoLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/Bestbets.png?raw=true",
-        "webpLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/Bestbets.webp?raw=true",
+        "photoLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/epheremal.png?raw=true",
+        "webpLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/epheremal.webp?raw=true",
         "photoDimension" : "is-2by1",
         "photoStructure" : "12 2by1 /img/sfv_candles_home.png,6 2by1 /img/sfv_candles_shop.png 6 2by1 /img/sfv_candles_cart.png",
-        "description" : "A sports betting site I made for a clients discord group. It's not finished as the client paused the project.",
-        "madeWith" : ["Next.js", "Node.js"],
-        "siteLink" : "https://bestbetsalgo.vercel.app/",
-        "sourceLink" : "https://github.com/BleedingEffigy/bestbets"
+        "description" : "A community learning platform to create new users and builders in the Web3 ecosystem.",
+        "madeWith" : ["Next.js", "React", "Node.js"],
+        "siteLink" : "https://ephemeraldao.netlify.app/",
+        "sourceLink" : "https://github.com/BleedingEffigy/EphemeralDAO"
     },
     {
         "title" : "ConeDoods NFT",
         "date": "JAN 2021",
-        "photoLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/Bestbets.png?raw=true",
-        "webpLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/Bestbets.webp?raw=true",
+        "photoLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/animateddoods.gif?raw=true",
+        "webpLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/animateddoods.webp?raw=true",
         "photoDimension" : "is-2by1",
         "photoStructure" : "12 2by1 /img/sfv_candles_home.png,6 2by1 /img/sfv_candles_shop.png 6 2by1 /img/sfv_candles_cart.png",
         "description" : "An NFT inspired by Boring Banana Co. Includes Smart Contract and an Image generator made using Python Pillow",
         "madeWith" : ["Solidity", "Python"],
-        "siteLink" : "https://bestbetsalgo.vercel.app/",
+        "siteLink" : "https://github.com/BleedingEffigy/ConedoodsInvasionClub",
         "sourceLink" : "https://github.com/BleedingEffigy/ConedoodsInvasionClub"
     },
     {
         "title" : "Sapphire: Twitter Bot",
         "date": "JAN 2021",
-        "photoLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/Bestbets.png?raw=true",
-        "webpLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/Bestbets.webp?raw=true",
+        "photoLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/sapphire.png?raw=true",
+        "webpLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/sapphire.webp?raw=true",
         "photoDimension" : "is-2by1",
         "photoStructure" : "12 2by1 /img/sfv_candles_home.png,6 2by1 /img/sfv_candles_shop.png 6 2by1 /img/sfv_candles_cart.png",
         "description" : "A twitter bot that promotes profiles by following users and appearing in their notifications. WIP",
         "madeWith" : ["Python"],
-        "siteLink" : "https://bestbetsalgo.vercel.app/",
-        "sourceLink" : "https://github.com/BleedingEffigy/ConedoodsInvasionClub"
+        "siteLink" : "https://github.com/BleedingEffigy/twitter-bot-sapphire",
+        "sourceLink" : "https://github.com/BleedingEffigy/twitter-bot-sapphire"
     },
     {
       "title" : "Blossom+",
@@ -55,7 +55,7 @@
       "photoDimension" : "is-2by1",
       "photoStructure" : "12 2by1 /img/sfv_candles_home.png,6 2by1 /img/sfv_candles_shop.png 6 2by1 /img/sfv_candles_cart.png",
       "description" : "A static ecommerce site for my mother to sell candles once she is ready, at that time a payment system will be setup.",
-      "madeWith" : ["Gatsby", "Redux"],
+      "madeWith" : ["Gatsby", "React", "Redux"],
       "siteLink" : "https://sfv-candles.netlify.app/",
       "sourceLink" : "https://github.com/BleedingEffigy/sfv_candle_shop"
     },
