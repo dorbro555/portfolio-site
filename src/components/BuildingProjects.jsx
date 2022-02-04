@@ -13,10 +13,12 @@ export default function FilteredProjects({ projects}){
                 <div className="p-4 md:w-1/2 xl:w-1/3" key={idx}>
                     <div className="h-full">
                         <div className="relative pb-48">
-                            <img className="lg:h-48 md:h-36 h-full w-full object-cover object-center absolute rounded-xl shadow-xl shadow-base-300/60" src={project.photoLink} alt="blog"></img>
+                            <img className="lg:h-48 md:h-36 h-full w-full object-cover object-center 
+                                    absolute rounded-xl shadow-xl shadow-base-300/60 transition hover:scale-110" 
+                                src={project.photoLink} alt="blog"></img>
                         </div>
                         <div className="relative -mt-4 px-6">
-                            <div className="px-5 py-4 bg-base-200 rounded-xl shadow-xl shadow-base-300/60">
+                            <div className="px-5 py-4 bg-base-200 rounded-xl shadow-xl shadow-base-300/60 transition">
                                 <h2 className="tracking-widest title-font font-poppins text-base-content mb-1 opacity-60">
                                     {project.madeWith.join(', ')}
                                 </h2>
