@@ -9,11 +9,30 @@
 	animation: gradient 2s ease infinite;
 }
 
+.card-gradient-scroll {
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+.gradient-pan-once {
+	background-size: 400% 400%;
+	animation: gradient-oneway 2s ease 1;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
 	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient-oneway {
+	0% {
 		background-position: 100% 50%;
 	}
 	100% {
