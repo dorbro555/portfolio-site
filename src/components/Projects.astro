@@ -1,5 +1,6 @@
 ---
 import FilteredProjects from "./FilteredProjects.jsx"
+import BuildingProjects from "./BuildingProjects.jsx"
 import projects from '../data/projects.json'
 
 ---
@@ -8,6 +9,7 @@ import projects from '../data/projects.json'
   <h1 class="text-5xl font-bold text-center text-base-content font-poppins">My Projects</h1>
   <div class="container px-5 py-24 w-5/6 mx-auto">
     <div class="flex flex-col -m-4">
+      <BuildingProjects projects={projects} client:visible/>
       <FilteredProjects projects={projects} client:visible/>
     </div>
   </div>

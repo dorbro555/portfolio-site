@@ -5,7 +5,8 @@
         "photoLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/epheremal.png?raw=true",
         "webpLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/epheremal.webp?raw=true",
         "description" : "A community learning platform to create new users and builders in the Web3 ecosystem.",
-        "madeWith" : ["Next.js", "React", "Node.js"],
+        "madeWith" : ["Next.js", "React"],
+        "building": true,
         "siteLink" : "https://ephemeraldao.netlify.app/",
         "sourceLink" : "https://github.com/BleedingEffigy/EphemeralDAO"
     },
@@ -16,6 +17,7 @@
         "webpLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/animateddoods.webp?raw=true",
         "description" : "An NFT inspired by Boring Banana Co. Includes Smart Contract and an Image generator made using Python Pillow",
         "madeWith" : ["Solidity", "Python"],
+        "building": true,
         "siteLink" : "https://github.com/BleedingEffigy/ConedoodsInvasionClub",
         "sourceLink" : "https://github.com/BleedingEffigy/ConedoodsInvasionClub"
     },
@@ -26,6 +28,7 @@
         "webpLink" : "https://github.com/BleedingEffigy/astro-portfolio/blob/master/public/assets/sapphire.webp?raw=true",
         "description" : "A twitter bot that promotes profiles by following users and appearing in their notifications. WIP",
         "madeWith" : ["Python"],
+        "building": true,
         "siteLink" : "https://github.com/BleedingEffigy/twitter-bot-sapphire",
         "sourceLink" : "https://github.com/BleedingEffigy/twitter-bot-sapphire"
     },

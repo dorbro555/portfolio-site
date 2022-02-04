@@ -1,35 +1,15 @@
-import { useState } from 'react'
 
 export default function FilteredProjects({ projects}){
-    const [activeTag, setActiveTag] = useState('none')
-    const allTags = [...new Set([].concat(...projects.map(project => project.madeWith)))]
+
     return(
         <>
-        {/* Filter Tags */}
-        <div className="btn-group mx-auto">
-            {/* TODO: tailwind breaks if I add a placeholder in the template literal. figure out why  */}
-            <button className={`my-2 btn btn-outline text-base-content font-poppins`}
-                    onClick={() => setActiveTag('none')}
-                    key='tag none'
-            >
-                All
-            </button>
-            {allTags.map((tag, idx) => (
-                <button className={`my-2 btn btn-outline${tag == activeTag ? ' btn-active':''} text-base-content font-poppins`}
-                        onClick={() => setActiveTag(tag)}
-                        key={'tag ' + idx}
-                >
-                            {tag}
-                </button> 
-            ))}
-
-        </div>
-
-        {/* Projects gallery */}
-        <div className='flex flex-row flex-wrap'>
+        {/* Building gallery */}
+        <div className='flex flex-row flex-wrap rounded-xl bg-base-100 mb-14 py-4'>
+            <div className="w-full p-4 flex flex-row">
+                <h1 className="font-bold text-base-content/80 font-andika text-5xl">In Development</h1>
+            </div>
             { projects
-                .filter(project => !project?.building)
-                .filter( project => activeTag == 'none' ? true : project.madeWith.includes(activeTag)).map( (project, idx) => (
+                .filter(project => project?.building).map( (project, idx) => (
                 <div className="p-4 md:w-1/2 xl:w-1/3" key={idx}>
                     <div className="h-full bg-base-200 rounded-lg shadow-xl shadow-base-300/50 overflow-hidden pb-5 border-2 border-base-200 hover:border-base-content">
                         <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.photoLink} alt="blog"></img>
@@ -70,6 +50,7 @@ export default function FilteredProjects({ projects}){
                 ))
             }
         </div>
+
         </>
     )
 }
