@@ -39,7 +39,7 @@ export default function FilteredProjects({ projects}){
                         </div>
                         <div className="relative -mt-4 px-6">
                             <div className="p-2 bg-base-200 rounded-xl shadow-xl shadow-base-300/60 transition 
-                                hover:bg-gradient-to-br from-primary to-accent bg-cover">
+                                hover:bg-gradient-to-br from-primary to-accent card-gradient-border">
                                 <div className="px-5 py-4 bg-base-200 rounded-xl">
                                     <h2 className="tracking-widest title-font font-poppins text-base-content mb-1 opacity-60">
                                         {project.madeWith.join(', ')}
