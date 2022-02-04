@@ -1,100 +1,6 @@
 ---
 import FilteredProjects from "./FilteredProjects.jsx"
-const projects = [
-  {
-    "title" : "BestBetsAlgo",
-    "date": "JAN 2021",
-    "photoLink" : Astro.resolve("../../assets/Bestbets.png"),
-    "webpLink" : Astro.resolve("../../assets/Bestbets.webp"),
-    "photoDimension" : "is-2by1",
-    "photoStructure" : "12 2by1 /img/sfv_candles_home.png,6 2by1 /img/sfv_candles_shop.png 6 2by1 /img/sfv_candles_cart.png",
-    "description" : "A sports betting site I made for a clients discord group. It's not finished as the client paused the project.",
-    "madeWith" : ["Next.js", "Node.js"],
-    "siteLink" : "https://bestbetsalgo.vercel.app/",
-    "sourceLink" : "https://github.com/BleedingEffigy/bestbets"
-  },
-  {
-    "title" : "Blossom+",
-    "date": "DEC 2021",
-    "photoLink" : Astro.resolve("../../assets/BlossomOG.png"),
-    "webpLink" : Astro.resolve("../../assets/BlossomOG.webp"),
-    "photoDimension" : "is-2by1",
-    "photoStructure" : "12 2by1 /img/sfv_candles_home.png,6 2by1 /img/sfv_candles_shop.png 6 2by1 /img/sfv_candles_cart.png",
-    "description" : "Helper CLI tool for installing and managing DaisyUI, a TailwindCSS Component library",
-    "madeWith" : [ "React", "Node.js"],
-    "siteLink" : "https://blossomplus.netlify.app/",
-    "sourceLink" : "https://github.com/BleedingEffigy/blossom-plus"
-  },
-  { 
-    "title" : "SFV Candle Shop",
-    "date": "MAY 2020",
-    "photoLink" : "https://rosamint.org/images/CandleShop.png",
-    "webpLink" : "https://rosamint.org/images/CandleShop.webp",
-    "photoDimension" : "is-2by1",
-    "photoStructure" : "12 2by1 /img/sfv_candles_home.png,6 2by1 /img/sfv_candles_shop.png 6 2by1 /img/sfv_candles_cart.png",
-    "description" : "A static ecommerce site for my mother to sell candles once she is ready, at that time a payment system will be setup.",
-    "madeWith" : ["Gatsby", "Redux"],
-    "siteLink" : "https://sfv-candles.netlify.app/",
-    "sourceLink" : "https://github.com/BleedingEffigy/sfv_candle_shop"
-  },
-  {
-    "title": "¡Aguas! Crypto",
-    "date": "FEB-JUN 2020",
-    "photoLink" : "https://rosamint.org/images/Aguas_Crypto_Homepage.png",
-    "webpLink" : "https://rosamint.org/images/Aguas_Crypto_Homepage.webp",
-    "photoDimension" : "is-2by1",
-    "description" : "A web app that consumes market data and displays it in an optimized and fast view. It pulls data from express-backend, and collates and presents it through a react-made interface",
-    "madeWith" : ["React", "Redis", "Express.js"],
-    "siteLink" : "https://www.rosamint.org/trade/",
-    "sourceLink" : "https://github.com/BleedingEffigy/Aguas-Crypto"
-  },
-  {
-    "title" : "US Deaths Project",
-    "date": "JUL 2019",
-    "photoLink" : "https://rosamint.org/images/USDeathsAPI.png",
-    "webpLink" : "https://rosamint.org/images/USDeathsApi.webp",
-    "photoDimension" : "is-2by1",
-    "description" : "An addition to the adopt-an-api movement, which means developing an api for some flat dataset(think .xls or .cvs), to encourage innovation through consumption of open data. The api is built on express and sqlite. ",
-    "madeWith" : ["React", "Sqlite"],
-    "sourceLink" : "https://github.com/BleedingEffigy/US-Deaths-API",
-    "siteLink" : "https://gentle-inlet-76524.herokuapp.com/"
-  },
-  {
-    "title" : "Navy DEP Blog",
-    "date": "NOV-DEC 2019",
-    "photoLink" : "https://rosamint.org/images/Navy_DEP_Blog_screengrab.png",
-    "webpLink" : "https://rosamint.org/images/Navy_DEP_Blog_screengrab.webp",
-    "photoDimension" : "is-3by2",
-    "description" : "A blog made with django for me to document my thoughts at a time when I thought I was going to be joining the navy.",
-    "madeWith" : ["Django", "Postgresql"],
-    "sourceLink" : "https://github.com/BleedingEffigy/navy-blog",
-    "siteLink" : "https://www.rosamint.org/navyblog/"
-  },
-  {
-    "title" : "Puppy Shop",
-    "date": "JUN 2019",
-    "photoLink" : "https://rosamint.org/images/SFV-chow-chow-Landing.png",
-    "webpLink" : "https://rosamint.org/images/SFV-chow-chow-Landing.webp",
-    "photoDimension" : "is-2by1",
-    "description" : "This is a react site for my mom to display and sell the numerous litter of puppies she's had",
-    "madeWith" : ["React", "Express.js"],
-    "sourceLink" : "https://glitch.com/edit/#!/chow-chow-shop",
-    "siteLink" : "https://chow-chow-shop.glitch.me/"
-  },
-  {
-    "title" : "Ether Gift Card",
-    "date": "DEC 2018",
-    "photoLink" : "https://rosamint.org/images/Ether-Card-Cover.png",
-    "webpLink" : "https://rosamint.org/images/Ether-Card-Cover.webp",
-    "photoDimension" : "is-2by1",
-    "description": "A single page gift card UI to a evm smart contract that held money. If you give it the right answers, it will send the money to an ethereum address I had setup for my mom.",
-    "madeWith" : ["React", "Truffle.js"],
-    "sourceLink" : "https://glitch.com/edit/#!/ether-gift-card",
-    "siteLink" : "https://ether-gift-card.glitch.me",
-    "smartContract" : "https://github.com/BleedingEffigy/truffle-gift/blob/master/contracts/EtherGift.sol"
-  }
-  
-]
+import projects from '../data/projects.json'
 
 ---
 
@@ -102,7 +8,7 @@ const projects = [
   <h1 class="text-5xl font-bold text-center text-base-content font-poppins">My Projects</h1>
   <div class="container px-5 py-24 w-5/6 mx-auto">
     <div class="flex flex-col -m-4">
-      <FilteredProjects projects={projects} />
+      <FilteredProjects projects={projects} client:visible/>
     </div>
   </div>
 </section>
