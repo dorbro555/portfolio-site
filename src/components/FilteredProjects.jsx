@@ -2,7 +2,8 @@ import { useState } from 'react'
 
 export default function FilteredProjects({ projects}){
     const [activeTag, setActiveTag] = useState('none')
-    const allTags = [...new Set([].concat(...projects.map(project => project.madeWith)))]
+    const FilteredProjectsList = projects.filter(project => !project?.building)
+    const allTags = [...new Set([].concat(...FilteredProjectsList.map(project => project.madeWith)))]
     return(
         <>
         {/* Filter Tags */}
@@ -27,8 +28,7 @@ export default function FilteredProjects({ projects}){
 
         {/* Projects gallery */}
         <div className='flex flex-row flex-wrap'>
-            { projects
-                .filter(project => !project?.building)
+            { FilteredProjectsList
                 .filter( project => activeTag == 'none' ? true : project.madeWith.includes(activeTag)).map( (project, idx) => (
                     <div className="p-4 md:w-1/2 xl:w-1/3" key={idx}>
                     <div className="h-full">
